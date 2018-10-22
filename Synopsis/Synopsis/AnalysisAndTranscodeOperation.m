@@ -271,7 +271,6 @@
 
     static int roundRobin = 0;
     NSArray<id<MTLDevice>>* allDevices = MTLCopyAllDevices();
-
 //    self.device = MTLCreateSystemDefaultDevice();
     self.device = allDevices[roundRobin];
     self.videoConformSession = [[SynopsisVideoFrameConformSession alloc] initWithRequiredFormatSpecifiers:requiredSpecifiers device:self.device inFlightBuffers:3];
