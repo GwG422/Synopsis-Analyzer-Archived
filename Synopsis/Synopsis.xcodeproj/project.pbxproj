@@ -120,13 +120,6 @@
 			remoteGlobalIDString = 1BBB10DD1D5542A200C22439;
 			remoteInfo = Synopsis;
 		};
-		1B87FA4F205AEF6600755B6C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1B7350F91DEF4FAE0053BC06 /* Synopsis-Framework.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1BEDA46D2024D79000E4617C;
-			remoteInfo = "Synopsis--Decoder-iOS";
-		};
 		1BB08BBF1EEF151F0058DFBB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1B7350F91DEF4FAE0053BC06 /* Synopsis-Framework.xcodeproj */;
@@ -506,7 +499,6 @@
 				1B7350FE1DEF4FAF0053BC06 /* Synopsis.framework */,
 				1B27807D1F22427000658C0B /* Synopsis.framework */,
 				1BB08BC01EEF151F0058DFBB /* Synopsis.framework */,
-				1B87FA50205AEF6600755B6C /* Synopsis.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1111,13 +1103,6 @@
 			fileType = wrapper.framework;
 			path = Synopsis.framework;
 			remoteRef = 1B7350FD1DEF4FAF0053BC06 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		1B87FA50205AEF6600755B6C /* Synopsis.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Synopsis.framework;
-			remoteRef = 1B87FA4F205AEF6600755B6C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		1BB08BC01EEF151F0058DFBB /* Synopsis.framework */ = {
