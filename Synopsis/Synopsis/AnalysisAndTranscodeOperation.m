@@ -273,7 +273,7 @@
     NSArray<id<MTLDevice>>* allDevices = MTLCopyAllDevices();
 //    self.device = MTLCreateSystemDefaultDevice();
     self.device = allDevices[roundRobin];
-    self.videoConformSession = [[SynopsisVideoFrameConformSession alloc] initWithRequiredFormatSpecifiers:requiredSpecifiers device:self.device inFlightBuffers:3];
+    self.videoConformSession = [[SynopsisVideoFrameConformSession alloc] initWithRequiredFormatSpecifiers:requiredSpecifiers device:self.device inFlightBuffers:3 frameSkipStride:0];
     
 //    @synchronized(roundRobin)
 //    {
@@ -830,7 +830,7 @@
                                                                   atTime:currentSamplePTS
                                                            withTransform:self.transcodeAssetWriterVideo.transform
                                                                     rect:rectForQualityHint(originalRect, self.analysisQualityHint)
-                                                         completionBlock:^(id<MTLCommandBuffer>commandBuffer, SynopsisVideoFrameCache* conformedFrameCache, NSError * error){
+                                                         completionBlock:^(BOOL frameSkip, id<MTLCommandBuffer>commandBuffer, SynopsisVideoFrameCache* conformedFrameCache, NSError * error){
                                                              
                                                              CFRelease(uncompressedVideoSampleBuffer);
                                                              
