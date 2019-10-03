@@ -14,8 +14,8 @@
 #import <Synopsis/AnalyzerPluginProtocol.h>
 
 #import "NSDictionary+JSONString.h"
-#import "BSON/BSONSerialization.h"
-#import "GZIP/GZIP.h"
+//#import "BSON/BSONSerialization.h"
+//#import "GZIP/GZIP.h"
 #import "AtomicBoolean.h"
 #include <sys/xattr.h>
 

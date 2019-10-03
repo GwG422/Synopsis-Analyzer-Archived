@@ -17,8 +17,8 @@
 #import "HapInAVFoundation.h"
 
 #import "NSDictionary+JSONString.h"
-#import "BSON/BSONSerialization.h"
-#import "GZIP/GZIP.h"
+//#import "BSON/BSONSerialization.h"
+//#import "GZIP/GZIP.h"
 #import "AtomicBoolean.h"
 
 @interface BaseTranscodeOperation (Private)

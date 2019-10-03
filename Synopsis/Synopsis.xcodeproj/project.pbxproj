@@ -39,7 +39,6 @@
 		1BA68C501AD02E97003B3CE9 /* BaseTranscodeOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA68C4F1AD02E97003B3CE9 /* BaseTranscodeOperation.m */; };
 		1BA68C551AD0C899003B3CE9 /* MetadataWriterTranscodeOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA68C541AD0C899003B3CE9 /* MetadataWriterTranscodeOperation.m */; };
 		1BA68C571AD26696003B3CE9 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BA68C561AD26696003B3CE9 /* CoreVideo.framework */; };
-		1BA68C611AD5D2A1003B3CE9 /* BSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA68C5F1AD5D2A1003B3CE9 /* BSONSerialization.m */; };
 		1BA68C6E1AD5D8D3003B3CE9 /* GZIP.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA68C6D1AD5D8D3003B3CE9 /* GZIP.m */; };
 		1BA76C411F83F0C10038F6AD /* PreferencesFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA76C3F1F83F0C10038F6AD /* PreferencesFileViewController.m */; };
 		1BA76C421F83F0C10038F6AD /* PreferencesFileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BA76C401F83F0C10038F6AD /* PreferencesFileViewController.xib */; };
@@ -180,6 +179,8 @@
 		1B007ED71B4EBAC700DE6E98 /* en */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/schema.strings; sourceTree = "<group>"; };
 		1B007EDA1B4EBAD500DE6E98 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = en; path = en.lproj/schema.xml; sourceTree = "<group>"; };
 		1B02BA491D2B07D100A4430F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		1B0C6F4622BBBB9700DDEF41 /* AnalysisOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnalysisOperation.h; sourceTree = "<group>"; };
+		1B0C6F4722BBBB9700DDEF41 /* AnalysisOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnalysisOperation.m; sourceTree = "<group>"; };
 		1B2E7C811E81DA8000EF07BC /* AtomicBoolean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtomicBoolean.h; sourceTree = "<group>"; };
 		1B2E7C821E81DA8000EF07BC /* AtomicBoolean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtomicBoolean.m; sourceTree = "<group>"; };
 		1B3233C01C2E395700C9CF5E /* PreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesViewController.h; sourceTree = "<group>"; };
@@ -451,6 +452,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		1B0C6F4322BBBB7000DDEF41 /* Deprecated */ = {
+			isa = PBXGroup;
+			children = (
+				1BA68C4E1AD02E97003B3CE9 /* BaseTranscodeOperation.h */,
+				1BA68C4F1AD02E97003B3CE9 /* BaseTranscodeOperation.m */,
+				1BEA4D401ACB2F6F00AB57C1 /* AnalysisAndTranscodeOperation.h */,
+				1BEA4D411ACB2F6F00AB57C1 /* AnalysisAndTranscodeOperation.m */,
+				1BA68C531AD0C899003B3CE9 /* MetadataWriterTranscodeOperation.h */,
+				1BA68C541AD0C899003B3CE9 /* MetadataWriterTranscodeOperation.m */,
+			);
+			path = Deprecated;
+			sourceTree = "<group>";
+		};
 		1B3233BC1C2E390600C9CF5E /* Preferences */ = {
 			isa = PBXGroup;
 			children = (
@@ -506,12 +520,9 @@
 		1B805E2D1B0114DD005D7354 /* Transcode & Analysis Operations */ = {
 			isa = PBXGroup;
 			children = (
-				1BA68C4E1AD02E97003B3CE9 /* BaseTranscodeOperation.h */,
-				1BA68C4F1AD02E97003B3CE9 /* BaseTranscodeOperation.m */,
-				1BEA4D401ACB2F6F00AB57C1 /* AnalysisAndTranscodeOperation.h */,
-				1BEA4D411ACB2F6F00AB57C1 /* AnalysisAndTranscodeOperation.m */,
-				1BA68C531AD0C899003B3CE9 /* MetadataWriterTranscodeOperation.h */,
-				1BA68C541AD0C899003B3CE9 /* MetadataWriterTranscodeOperation.m */,
+				1B0C6F4622BBBB9700DDEF41 /* AnalysisOperation.h */,
+				1B0C6F4722BBBB9700DDEF41 /* AnalysisOperation.m */,
+				1B0C6F4322BBBB7000DDEF41 /* Deprecated */,
 			);
 			name = "Transcode & Analysis Operations";
 			sourceTree = "<group>";
@@ -1069,6 +1080,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -1237,7 +1249,6 @@
 				1B3233DC1C31F8F200C9CF5E /* PresetGroup.m in Sources */,
 				1B6A628F1F9523910045F1BD /* OperationRowView.m in Sources */,
 				1BA76C411F83F0C10038F6AD /* PreferencesFileViewController.m in Sources */,
-				1BA68C611AD5D2A1003B3CE9 /* BSONSerialization.m in Sources */,
 				1BC71EAD1F17E8FE006DD7DC /* colourblock.cpp in Sources */,
 				1BC71EAE1F17E8FE006DD7DC /* colourfit.cpp in Sources */,
 				1B2E7C831E81DA8000EF07BC /* AtomicBoolean.m in Sources */,

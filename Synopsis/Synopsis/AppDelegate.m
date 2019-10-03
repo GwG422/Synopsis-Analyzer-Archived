@@ -1142,7 +1142,7 @@ static BOOL isRunning = NO;
         }
     }
     // Serial transcode queue
-    self.synopsisAnalysisQueue.maxConcurrentOperationCount = actualJobCount;
+    self.synopsisAnalysisQueue.maxConcurrentOperationCount = actualJobCount;    
     self.synopsisFinalizationQueue.maxConcurrentOperationCount = actualJobCount;
 }
 
